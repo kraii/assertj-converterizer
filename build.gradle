@@ -2,13 +2,14 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 
 repositories {
-    // Use 'jcenter' for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
 
 dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.5'
     compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'org.unix4j:unix4j-command:0.3'
     testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.2.0'
 }
 

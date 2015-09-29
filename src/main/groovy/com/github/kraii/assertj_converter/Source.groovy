@@ -21,11 +21,11 @@ class Source {
         this
     }
 
-    void transformEachLine(def closure) {
+    Source transformEachLine(def closure) {
         String transformedText = ""
         text.eachLine { line ->
             transformedText += closure(line) + "\n"
         }
-        text = transformedText
+        new Source(transformedText)
     }
 }
